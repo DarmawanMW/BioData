@@ -1,0 +1,18 @@
+{%load static%}
+<nav class="navbar">
+    <ul class="navbar-nav">
+        <img src="{% static 'img/MWdarmawan.jpg' %}" alt="Profile" class="profile-nav">
+        <li class="nav-item {% if request.path == '' %}active{% endif %}">
+            <a href="{% url 'home' %}" class="aktip">Home</a>
+        <li class="nav-item {% if request.path == '/about/' %}active{% endif %}">
+            <a href="{% url 'about' %}" class="aktip">About Me</a>
+        </li>
+        <li class="nav-item {% if request.path == '/education/' %}active{% endif %}">
+            <a href="{% url 'education' %}" class="aktip">My Education</a>
+        </li>
+        <li class="nav-item {% if request.path == '/experiences' %}active{% endif %}">
+            <a href="{% url 'experiences' %}" class="aktip">Experiences and Skills</a>
+        </li>
+        </li>
+    </ul>
+</nav>

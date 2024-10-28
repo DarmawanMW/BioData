@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiodataKu {% block title %}{% endblock %}</title>
+
+    {% load static %}
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    {% include 'navbar/navbar.html' %}
+    <div class="container">
+        <img src="{% static 'img/MWdarmawan.jpg' %}" alt="Profile" class="profile-pic">
+        <h2 class="title">Muhamad Wahyu Darmawan</h2>
+        <h3 class="job"><i>Pendidikan Ilmu Komputer</i></h3>
+
+        {% block body %}
+        {% endblock %}
+
+        <ul class="contact">
+            <li class="contact-item">
+                <div class="detail-contact">
+                    <i data-feather="phone"></i>
+                    <a href="tel:+62895337833908">Phone</a>
+                </div>
+            </li>
+            <li class="contact-item">|</li>
+            <li class="contact-item">
+                <div class="detail-contact">
+                    <i data-feather="mail"></i>
+                    <a href="mailto:muhamadwahyu244@gmail.com">Email</a>
+                </div>
+            </li>
+            <li class="contact-item">|</li>
+            <li class="contact-item">
+                <div class="detail-contact">
+                    <i data-feather="instagram"></i>
+                    <a href="https://www.instagram.com/em_whyuu/" target="_blank">Instagram</a>
+                </div>
+            </li>
+        </ul>
+        <p class="copyright">&copy; M wahyu 2024.</p>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>
